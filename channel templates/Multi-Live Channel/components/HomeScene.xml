@@ -3,9 +3,9 @@
 <!-- Copyright 2016 Roku Corp.  All Rights Reserved. -->
 
 <component name="HomeScene" extends="Scene" xsi:noNamespaceSchemaLocation="https://devtools.web.roku.com/schema/RokuSceneGraph.xsd">
-	<script type = "text/brightscript" uri = "pkg:/components/HomeScene.brs" />	
+	<script type = "text/brightscript" uri = "pkg:/components/HomeScene.brs" />
 	<script type= "text/brightscript" uri = "pkg:/components/Config.brs"/>
-	
+
 	<children>
 		<Video
 			id = "Video"
@@ -38,7 +38,7 @@
 			repeat = "false"
 			duration = ".2"
 			easeFunction = "linear">
-			<Vector2DFieldInterpolator 
+			<Vector2DFieldInterpolator
 				fieldToInterp = "BottomBar.translation"
 				key = "[0,1]"
 				keyValue = "[[0,1080],[0,745]]"
@@ -49,7 +49,7 @@
 			repeat = "false"
 			duration = ".2"
 			easeFunction = "linear">
-			<Vector2DFieldInterpolator 
+			<Vector2DFieldInterpolator
 				fieldToInterp = "BottomBar.translation"
 				key = "[0,1]"
 				keyValue = "[[0,745],[0,1080]]"

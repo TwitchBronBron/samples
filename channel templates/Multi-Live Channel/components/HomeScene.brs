@@ -11,27 +11,27 @@ Sub init()
     m.HideBar = m.top.findNode("HideBar")
     m.Hint = m.top.findNode("Hint")
     m.Timer = m.top.findNode("Timer")
-    
+
     m.Hint.font.size = "20"
     showHint()
-    
+
     m.array = loadConfig()
     if m.array.count() = 1
         m.BottomBar.visible = false
         m.Video.setFocus(true)
     end if
-    
+
     m.AdTimer.control = "start"
-    
+
     m.LoadTask = createObject("roSGNode", "RowListContentTask")
     m.LoadTask.observeField("content", "rowListContentChanged")
     m.LoadTask.control = "RUN"
 
     m.RowList.setFocus(true)
     m.RowList.rowLabelFont.size = "24"
-    
+
     m.Timer.observeField("fire", "hideHint")
-    
+
     m.AdTimer.observeField("fire", "change")
     m.RowList.observeField("rowItemSelected", "ChannelChange")
 End Sub
@@ -61,7 +61,7 @@ Sub optionsMenu()
     End if
 End Sub
 
-function onKeyEvent(key as String, press as Boolean) as Boolean 
+function onKeyEvent(key as String, press as Boolean) as Boolean
     handled = false
         if press
            if key="up" or key = "down"
